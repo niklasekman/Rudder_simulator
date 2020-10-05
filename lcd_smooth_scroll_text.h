@@ -30,7 +30,7 @@ byte *generate_text_canvas(String text);
 
 void init_text_scroll();
 
-void update_text(int pos_px);
+void set_text_scroll(int pos_px);
 
 void setup_text();
 

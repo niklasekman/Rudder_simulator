@@ -19,13 +19,17 @@ void setup_text() {
 }
 
 void update_text() {
+  set_text_scroll(frame_count);
+  frame_count++; // Shift text left by one pixel
+}
+
+void set_text_scroll(int pos_px) {
   for (int i = 0; i < NUMCHARS; i++) { // For each custom character
-    int offset = (i*SINGLE_CHAR_WIDTH + frame_count); // Generate offset for current frame
+    int offset = (i*SINGLE_CHAR_WIDTH + pos_px); // Generate offset for current frame
     offset = offset % (message_text.length()*SINGLE_CHAR_WIDTH + WHITESPACE_PIXELS);
     transpose(custom_chars[i], &canvas[offset]); // Copy data from canvas into custom character
     lcd.createChar(i, custom_chars[i]); // Push custom character to the display
   }
-  frame_count++; // Shift text left by one pixel
 }
 
 // Function to get a 5x7 character block from an ASCII character value
