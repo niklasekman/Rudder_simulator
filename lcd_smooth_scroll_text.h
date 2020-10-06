@@ -15,6 +15,8 @@
 // The text we will display
 String message_text = "000 030 060 090 120 150 180 210 240 270 300 330 ";
 
+int message_pixel_width = message_text.length()*SINGLE_CHAR_WIDTH + WHITESPACE_PIXELS;
+
 byte *canvas;
 byte *custom_chars[NUMCHARS];
 int frame_count = 0;
@@ -31,6 +33,8 @@ byte *generate_text_canvas(String text);
 void init_text_scroll();
 
 void set_text_scroll(int pos_px);
+
+void set_text_scroll_degrees(int pos_px);
 
 void setup_text();
 

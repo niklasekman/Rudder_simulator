@@ -23,10 +23,14 @@ void update_text() {
   frame_count++; // Shift text left by one pixel
 }
 
+void set_text_scroll_degrees(int deg) {
+  
+}
+
 void set_text_scroll(int pos_px) {
   for (int i = 0; i < NUMCHARS; i++) { // For each custom character
     int offset = (i*SINGLE_CHAR_WIDTH + pos_px); // Generate offset for current frame
-    offset = offset % (message_text.length()*SINGLE_CHAR_WIDTH + WHITESPACE_PIXELS);
+    offset = offset % message_pixel_width;
     transpose(custom_chars[i], &canvas[offset]); // Copy data from canvas into custom character
     lcd.createChar(i, custom_chars[i]); // Push custom character to the display
   }
