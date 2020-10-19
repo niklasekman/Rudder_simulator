@@ -5,6 +5,7 @@
   Joseph Rautenbach, 2020
 */
 
+
 // Adjust these to yout liking
 #define GAP_BETWEEN_CHARS 1
 #define WHITESPACE_PIXELS 0

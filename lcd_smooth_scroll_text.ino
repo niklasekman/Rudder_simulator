@@ -1,4 +1,5 @@
-
+#include "num5x7.h"
+#include "lcd_smooth_scroll_text.h"
 
 void setup_text() {
   // initialize LCD and set up the number of columns and rows:

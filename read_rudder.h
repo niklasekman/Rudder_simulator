@@ -1,0 +1,1 @@
+int readRudderPos(int pin);
